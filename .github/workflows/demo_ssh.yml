@@ -13,6 +13,6 @@ jobs:
       with:
         host: test.dataseers.in
         username: mpatil
-        password: mp@123DataSeer$
+        key: ${{ secrets.PRIVATE_KEY }}
         port: 443
         script: whoami
