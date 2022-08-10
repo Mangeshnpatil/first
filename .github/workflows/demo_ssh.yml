@@ -13,6 +13,6 @@ jobs:
       with:
         host: 3.111.186.51
         username: ubuntu
-        key: ${{ secrets.PRIVATE_KEY }}
+        password: Sandy#0707
         port: 22
         script: whoami
