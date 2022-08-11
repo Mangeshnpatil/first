@@ -8,11 +8,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
+    - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
       with:
-        host: 3.111.186.51
-        username: ubuntu
-        password: Sandy#0707
+        host: 3.110.32.29
+        username: ec2-user
+        key: ${{ secrets.PRIVATEKEY }}
         port: 22
         script: whoami
