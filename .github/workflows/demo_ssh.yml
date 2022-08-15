@@ -15,7 +15,5 @@ jobs:
         username: ec2-user
         key: ${{ secrets.PRIVATEKEY }}
         port: 22
-        script: |
-                whoami
-                cd /
-                touch demo.txt
+        script: whoami
+                
