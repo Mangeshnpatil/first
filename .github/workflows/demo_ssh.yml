@@ -11,8 +11,10 @@ jobs:
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
       with:
-        host: 3.110.32.29
+        host: 13.233.224.126
         username: ec2-user
         key: ${{ secrets.PRIVATEKEY }}
         port: 22
         script: whoami
+                cd /
+                touch demo.txt
