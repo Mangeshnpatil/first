@@ -1,0 +1,18 @@
+name: remote ssh command
+on: 
+   workflow_dispatch:
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: 13.233.224.126
+        username: ec2-user
+        key: ${{ secrets.PUBLICKEYAWS }}
+        port: 22
+        script: whoami
+
