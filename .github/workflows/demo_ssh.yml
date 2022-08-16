@@ -16,4 +16,25 @@ jobs:
         key: ${{ secrets.PRIVATEKEY }}
         port: 22
         script: whoami
+    - name: Send mail
+      if: always()
+      uses: dawidd6/action-send-mail@v2
+      with:
+          # mail server settings
+        server_address: smtp.gmail.com
+        server_port: 465
+                 # user credentials
+        username: er.patilmangesh@gmail.com
+        password: 9561356157
+               # email subject
+        subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+                  # email body as text
+        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+                  # comma-separated string, send email to
+        to: sandiplondhe3@gmail.com
+                # from email name
+        from: Mangesh Patil
+        
+
+     
                 
